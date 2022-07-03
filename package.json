@@ -24,7 +24,12 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:css": "stylelint src",
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +48,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-clean-order": "^0.8.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^5.0.0",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "husky": "^8.0.0"
   }
 }
